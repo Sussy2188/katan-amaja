@@ -24,10 +24,10 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">    
             </p>
             <p>
-                No estas registrado? <a href="registrar" class="">Registrate aqui</a>                
+                No estas registrado? <a href="registrar.php" class="">Registrate aqui</a>                
             </p>
             <button type="submit" class="btn btn-outline-primary btn-block btn-main">Iniciar Sesion</button>
-            <a href="index" class="btn btn-outline-danger btn-block btn-cancel">Cancelar</a>
+            <a href="index.php" class="btn btn-outline-danger btn-block btn-cancel">Cancelar</a>
         </form>
     </main>
     <?php include 'componentes/coverFootBar.php'; ?>

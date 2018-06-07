@@ -26,10 +26,10 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Confirmar Password" required="">    
             </p>
             <p>
-                Ya tienes una cuenta? <a href="login" class="">Inicia Sesion aqui</a>                
+                Ya tienes una cuenta? <a href="login.php" class="">Inicia Sesion aqui</a>                
             </p>
             <button type="submit" class="btn btn-outline-primary btn-block btn-main">Registro</button>
-            <a href="index" class="btn btn-outline-danger btn-block btn-cancel">Cancelar</a>
+            <a href="index.php" class="btn btn-outline-danger btn-block btn-cancel">Cancelar</a>
         </form>
     </main>
     <?php include 'componentes/coverFootBar.php'; ?>

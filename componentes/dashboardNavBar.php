@@ -7,7 +7,7 @@
 ?>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index">KATAN AMAJA</a>
+        <a class="navbar-brand" href="index.php">KATAN AMAJA</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,9 +26,9 @@
                         warroyo33
                     </a>
                     <div class="dropdown-menu show" aria-labelledby="usuarioDD">
-                        <a class="dropdown-item" href="user-profile">Ver Perfil</a>
+                        <a class="dropdown-item" href="user-profile.php">Ver Perfil</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="index">Cerrar Sesion</a>
+                        <a class="dropdown-item" href="index.php">Cerrar Sesion</a>
                     </div>
                 </li>
             </ul>
