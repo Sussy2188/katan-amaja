@@ -6,7 +6,11 @@
  */
 ?>
 <?php
- session_start();
+    session_start();
+    $username="usuario";
+    if(isset($_SESSION['username'])){
+        $username=$_SESSION['username'];
+    } 
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/dashboard.css" />

@@ -8,11 +8,6 @@
  */
 ?>
 <?php 
-    /*  inicia sesion y redirige a index si no existe sesion */
-    if(isset($_SESSION['username']))
-        header('Location:dashboard.php');
-?>
-<?php 
     $title ="Bienvenido a Katan Amaja";
     if(isset($_SESSION['title']))
         $title =$_SESSION['title'];

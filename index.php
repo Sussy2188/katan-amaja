@@ -5,8 +5,11 @@
  * @package Katan
  */
 ?>
-<?php
- session_start();
+<?php 
+    session_start();
+    /*  inicia sesion y redirige a index si no existe sesion */
+    if(isset($_SESSION['username']))
+        header('Location:dashboard.php');
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
