@@ -1,0 +1,22 @@
+html, body {
+    height: auto;
+}
+
+.dashboard {
+    width: 100%;
+}
+
+.dashboard .white-clear {
+    background-color: #e9ecef5e;
+}
+
+.dashboard .transparent {
+    background-color: transparent;
+}
+
+.dashboard .dark {
+    background-color: #343a40!important;
+}
+.jumbotron {
+    margin-bottom: 0;
+}
