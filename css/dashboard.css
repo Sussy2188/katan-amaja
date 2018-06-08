@@ -20,3 +20,7 @@ html, body {
 .jumbotron {
     margin-bottom: 0;
 }
+
+.bg-hero {
+    background-image: url(../img/bg/colorful-wine.png);
+}

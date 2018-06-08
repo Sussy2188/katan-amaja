@@ -11,6 +11,9 @@
     if(isset($_SESSION['username']))
         header('Location:dashboard.php');
 ?>
+<?php 
+    $_SESSION['title']= "Bienvenido a Katan Amaja";
+?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">

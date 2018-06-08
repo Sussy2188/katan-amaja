@@ -42,10 +42,10 @@
         unset($_POST['registrar']);
     }
 ?>
-<?php include 'header.php'; ?>
 <?php 
     $_SESSION['title']= "Registrar Usuario - Katan Amaja";
 ?>
+<?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <?php include 'componentes/coverNavBar.php'; ?>

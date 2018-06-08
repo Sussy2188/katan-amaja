@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina dashboard de katan amaja
+ * Contiene la pagina Usuarios de katan amaja
  *
  * @package Katan
  */
@@ -13,7 +13,7 @@
     } 
 ?>
 <?php 
-    $_SESSION['title']= "Katan Amaja | Vinos de cafe";
+    $_SESSION['title']= "Lista de usuarios | Katan Amaja - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/dashboard.css" />

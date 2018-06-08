@@ -44,10 +44,10 @@
         unset($_POST['login']);
     }
 ?>
-<?php include 'header.php'; ?>
 <?php 
     $_SESSION['title']= "Iniciar Sesion - Katan Amaja";
 ?>
+<?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <?php include 'componentes/coverNavBar.php'; ?>
