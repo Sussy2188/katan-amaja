@@ -35,7 +35,16 @@
                 $_SESSION['nombreUsuario']=$nombreUsuario;
                 $_SESSION['privilegio']=$privilegio;
                 mysqli_free_result($query);
-                header("Location:dashboard.php");
+                switch ($privilegio) {
+                    case 1:
+                        header("Location:admin.php");
+                        break;
+                    case 2:
+                        header("Location:dashboard.php");
+                        break;
+                    default:
+                        break;
+                }
                 exit();
             }else{
                 $message="Usuario o contraseña invalidos.";
