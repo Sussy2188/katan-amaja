@@ -5,13 +5,26 @@
  * @package Katan
  */
 ?>
+<?php
+    $dashboardActive="";
+    if(isset($_SESSION['dashboardActive'])){ 
+        $dashboardActive='active';
+    } 
+    $usersActive="";
+    if (isset($_SESSION['usersActive'])) {
+        $usersActive='active';
+    }
+    
+    unset($_SESSION['dashboardActive']);
+    unset($_SESSION['usersActive']);
+?>
 <nav id="sidebar">
     <div class="sidebar-header">
         <h3>Katan Amaja</h3>
         <p>Administrador</p>
     </div>
     <ul class="list-unstyled components">
-        <li class="active">
+        <li>
             <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"><?php echo $username; ?></a>
             <ul class="collapse list-unstyled" id="userSubmenu">
                 <li><a href='perfil.php?username='>Ver Perfil</a></li>
@@ -20,29 +33,30 @@
         </li>
     </ul>
     <ul class="list-unstyled components">
-        <li>
+        <li class="<?php echo $dashboardActive; ?>">
             <a href="admin.php">Dashboard</a>
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+        </li>
+        <li class="<?php echo $usersActive; ?>">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Usuarios</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li><a href="#">Home 1</a></li>
-                <li><a href="#">Home 2</a></li>
-                <li><a href="#">Home 3</a></li>
+                <li><a href="#">Lista de usuarios</a></li>
+                <li><a href="#">Agregar Usuario</a></li>
+                <li><a href="#">Modificar Usuario</a></li>
+                <li><a href="#">Eliminar Usuario</a></li>
             </ul>
         </li>
         <li>
             
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="#">Lista de productos</a></li>
+                <li><a href="#">Agregar producto</a></li>
+                <li><a href="#">Modificar producto</a></li>
+                <li><a href="#">Eliminar producto</a></li>
             </ul>
         </li>
         <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
+            <a href="#">Contactenos</a>
         </li>
     </ul>
 

@@ -15,17 +15,22 @@
     if (isset($_SESSION['privilegio'])) {
         $privilegio=$_SESSION['privilegio'];
     }
-    switch ($privilegio) {
-        case 2:
-            header("Location:dashboard.php");
-            break;
-        default:
-            break;
+    if ($privilegio>1) {
+        header("Location:dashboard.php");
+    }
+
+    $_SESSION['dashboardActive']="true";
+?>
+<?php 
+    require("tools/conexion.php");
+    $totalUsuarios=0;
+    $queryUsuario = mysqli_query($acceso, "SELECT COUNT(id_usuario) AS total FROM usuarios");
+    while ($row=mysqli_fetch_assoc($queryUsuario)) {
+        $totalUsuarios=$row['total'];
     }
 ?>
-
 <?php 
-    $_SESSION['title']= "Lista de usuarios | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Dashboard Administrador | Katan Amaja - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
@@ -52,7 +57,7 @@
                             <span><i class="fas fa-user-astronaut f-s-40 color-danger"></i></span>
                         </div>
                         <div class="media-body media-text-right">
-                            <h2>847</h2>
+                            <h2><?php echo $totalUsuarios; ?></h2>
                             <p class="m-b-0">Usuarios</p>
                         </div>
                     </div>
@@ -79,7 +84,7 @@
                         </div>
                         <div class="media-body media-text-right">
                             <h2>568120</h2>
-                            <p class="m-b-0">Total de Ganancia</p>
+                            <p class="m-b-0">Ganancias</p>
                         </div>
                     </div>
                 </div>
