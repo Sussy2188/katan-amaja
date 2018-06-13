@@ -39,7 +39,7 @@
         <li class="<?php echo $usersActive; ?>">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Usuarios</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li><a href="#">Lista de usuarios</a></li>
+                <li><a href="listadoUsuarios.php">Lista de usuarios</a></li>
                 <li><a href="#">Agregar Usuario</a></li>
                 <li><a href="#">Modificar Usuario</a></li>
                 <li><a href="#">Eliminar Usuario</a></li>
@@ -54,9 +54,6 @@
                 <li><a href="#">Modificar producto</a></li>
                 <li><a href="#">Eliminar producto</a></li>
             </ul>
-        </li>
-        <li>
-            <a href="#">Contactenos</a>
         </li>
     </ul>
 

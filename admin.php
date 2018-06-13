@@ -45,65 +45,60 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="container">
-            <a class="navbar-brand " href="#">Dashboard</a>
+            <a class="navbar-brand " href="admin.php">Dashboard</a>
         </div>
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="card p-30">
-                    <div class="media">
-                        <div class="media-left meida media-middle">
-                            <span><i class="fas fa-user-astronaut f-s-40 color-danger"></i></span>
-                        </div>
-                        <div class="media-body media-text-right">
-                            <h2><?php echo $totalUsuarios; ?></h2>
-                            <p class="m-b-0">Usuarios</p>
-                        </div>
+    <div class="row p-15">
+        <div class="col-sm">
+            <div class="card p-30">
+                <div class="media">
+                    <div class="media-left meida media-middle">
+                        <span><i class="fas fa-user-astronaut f-s-40 color-danger"></i></span>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card p-30">
-                    <div class="media">
-                        <div class="media-left meida media-middle">
-                            <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
-                        </div>
-                        <div class="media-body media-text-right">
-                            <h2>1178</h2>
-                            <p class="m-b-0">Ventas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="card p-30">
-                    <div class="media">
-                        <div class="media-left meida media-middle">
-                            <span><i class="fas fa-dollar-sign f-s-40 color-primary"></i></span>
-                        </div>
-                        <div class="media-body media-text-right">
-                            <h2>568120</h2>
-                            <p class="m-b-0">Ganancias</p>
-                        </div>
+                    <div class="media-body media-text-right">
+                        <h2><?php echo $totalUsuarios; ?></h2>
+                        <p class="m-b-0">Usuarios</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
-                <canvas id="myChart" width="400" height="400"></canvas>
+        <div class="col-sm">
+            <div class="card p-30">
+                <div class="media">
+                    <div class="media-left meida media-middle">
+                        <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
+                    </div>
+                    <div class="media-body media-text-right">
+                        <h2>1178</h2>
+                        <p class="m-b-0">Ventas</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm">
-            One of three columns
-            </div>
-            <div class="col-sm">
-            One of three columns
+        </div>
+        <div class="col-sm">
+            <div class="card p-30">
+                <div class="media">
+                    <div class="media-left meida media-middle">
+                        <span><i class="fas fa-dollar-sign f-s-40 color-primary"></i></span>
+                    </div>
+                    <div class="media-body media-text-right">
+                        <h2>568120</h2>
+                        <p class="m-b-0">Ganancias</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-        
-    
+    <div class="row">
+        <div class="col-sm">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+        <div class="col-sm">
+        One of three columns
+        </div>
+        <div class="col-sm">
+        One of three columns
+        </div>
     </div>
 </div>
 <script>
