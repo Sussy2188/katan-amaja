@@ -40,7 +40,7 @@
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Usuarios</a>
             <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li><a href="listadoUsuarios.php">Lista de usuarios</a></li>
-                <li><a href="#">Agregar Usuario</a></li>
+                <li><a href="agregarUsuario.php">Agregar Usuario</a></li>
                 <li><a href="#">Modificar Usuario</a></li>
                 <li><a href="#">Eliminar Usuario</a></li>
             </ul>

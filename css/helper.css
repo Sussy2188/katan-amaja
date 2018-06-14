@@ -1440,3 +1440,12 @@
 .w-100{
     width:100%!important;
 }
+
+.add-user-form {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    resize: both;
+    width: 50%;
+    max-width: 500px;
+}
