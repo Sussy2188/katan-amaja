@@ -53,7 +53,7 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Listado de Usuarios | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Agregar Usuarios | Katan Amaja - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
@@ -97,7 +97,7 @@
                 <input type="number" name="privilegio" id="privilegio" class="form-control" placeholder="Privilegio" required="">            
             </p>
             <button type="submit" name="registrar" value="Guardar" class="btn btn-primary btn-block btn-main">Guardar</button>
-            <a href="listadoUsuarios.php" class="btn btn-outline-danger btn-block btn-cancel">Cancelar</a>
+            <a href="listadoUsuarios.php" class="btn btn-outline-danger btn-block btn-cancel">Regresar</a>
         </form>
     </div>
 </div>
