@@ -1,0 +1,13 @@
+/* CSS Document */
+
+html, body {
+    height: auto;
+}
+
+.dashboard {
+    width: 100%;
+}
+
+.dashboard .white-clear {
+    background-color: #e9ecef5e;
+}

@@ -19,8 +19,20 @@ html, body {
 }
 .jumbotron {
     margin-bottom: 0;
+	
 }
 
-.bg-hero {
-    background-image: url(../img/bg/colorful-wine.png);
-}
+.informacion{
+	
+	
+	}
+	
+.horarios{
+	
+	}
+
+.suscripcion{
+	text-align: left;
+	padding: 0;
+	}
+

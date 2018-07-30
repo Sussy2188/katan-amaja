@@ -21,31 +21,28 @@
 <?php include 'componentes/dashboardNavBar.php'; ?>
     <div class="jumbotron transparent bg-hero">
         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        </div>
+        <img class="logo" src="img/logo-pagina-2.png" alt="Generic placeholder image">
     </div>
     <div class="jumbotron dark">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <img class="" src="img/icon/nueva_historia.png" alt="Generic placeholder image" width="146" height="180">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    <h2>Nuestra Historia</h2>
+                    <p>Hacer vino es un privilegio increíble. Es algo que todos esperamos hacer todos los días. </p>
+                    <p><a class="btn btn-secondary" href="historia" role="button">leer mas »</a></p>
               </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="" src="img/icon/promociones.png" alt="Generic placeholder image" width="74" height="175">
-                    <h2>Heading</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    <h2>Promociones</h2>
+                    <p>Encuentra las mejores promociones, hechas especialmente para ti.</p>
+                    <p><a class="btn btn-secondary" href="promociones" role="button">Ver promociones »</a></p>
               </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="" src="img/icon/catalogo.png" alt="Generic placeholder image" width="240" height="177">
-                    <h2>Heading</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+                    <h2>Catalogo</h2>
+                    <p>En esta seccion encontraras todos nuestros vinos, hechos especialmente para ti.</p>
+                    <p><a class="btn btn-secondary" href="catalogo" role="button">Ver catalogo»</a></p>
               </div><!-- /.col-lg-4 -->
             </div>
         </div>
@@ -57,12 +54,49 @@
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
         </div>
     </div>
+    
     <div class="jumbotron dark">
-        <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-        </div>
+    	<div class="container">
+  <div class="row">
+    <div class="col-sm informacion">
+   <div> 
+            	<h1>Direccion</h1>
+            	<p>
+                Suscribete para estar enterado de nuestras promociones 
+            	</p>
+            </div>
+    </div>
+    
+    <div class="col-sm horarios">
+      <div> 
+            	<h1>Horarios</h1>
+            	<p>
+                Suscribete para estar enterado de nuestras promociones 
+            	</p>
+            </div>
+    </div>
+    
+    <div class="col-sm suscripcion">
+      <form action="">
+        	<div> 
+            	<h1>Suscribete</h1>
+            	<p>
+                Suscribete para estar enterado de nuestras promociones 
+            	</p>
+            </div>
+            <input type="text" name="suscripcion" placeholder="email">
+            <input type="button" value="suscribirme" id="suscripcion"
+            
+      </form>      
+        
+    </div>
+  </div>
+</div>
+        
+      
+            
+    
+
     </div>
 </div>
 

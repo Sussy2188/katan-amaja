@@ -19,7 +19,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <?php include 'componentes/coverNavBar.php'; ?>
     <main role="main" class="inner cover">
-    <h1 class="cover-heading">Katan Amaja</h1>
+<h1 class="cover-heading">Katan Amaja</h1>
     <h3 class="cover-heading">Vinos de cafe</h3>
 
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
