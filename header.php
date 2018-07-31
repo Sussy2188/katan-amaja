@@ -11,6 +11,12 @@
     $title ="Bienvenido a Katan Amaja";
     if(isset($_SESSION['title']))
         $title =$_SESSION['title'];
+        
+    function pre_r($array){
+        echo '<pre>';
+        print_r($array);
+        echo '</pre>';
+    }
 ?>
 <!DOCTYPE html>
 <html>

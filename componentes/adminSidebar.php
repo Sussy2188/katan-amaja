@@ -14,9 +14,14 @@
     if (isset($_SESSION['usersActive'])) {
         $usersActive='active';
     }
+    $productosActive="";
+    if (isset($_SESSION['productosActive'])) {
+        $productosActive='active';
+    }
     
     unset($_SESSION['dashboardActive']);
     unset($_SESSION['usersActive']);
+    unset($_SESSION['productosActive']);
 ?>
 <nav id="sidebar">
     <div class="sidebar-header">
@@ -43,11 +48,10 @@
                 <li><a href="agregarUsuario.php">Agregar Usuario</a></li>
             </ul>
         </li>
-        <li>
-            
+        <li class="<?php echo $productosActive; ?>">
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li><a href="#">Lista de productos</a></li>
+                <li><a href="listadoProductos.php">Lista de productos</a></li>
                 <li><a href="#">Agregar producto</a></li>
                 <li><a href="#">Modificar producto</a></li>
                 <li><a href="#">Eliminar producto</a></li>

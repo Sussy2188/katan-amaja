@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina Usuarios de katan amaja
+ * Contiene Listado de productos de la pagina katan amaja
  *
  * @package Katan
  */
@@ -27,14 +27,14 @@
         header("Location:dashboard.php");
     }
 
-    $_SESSION['usersActive']="true";
+    $_SESSION['productosActive']="true";
     unset($_SESSION['success']);
     unset($_SESSION['message']);
 ?>
 <?php 
     require("tools/conexion.php");
     $totalUsuarios=0;
-    $queryUsuario = mysqli_query($acceso, "SELECT * FROM usuarios");
+    $queryUsuario = mysqli_query($acceso, "SELECT * FROM listado_productos");
 ?>
 <?php
     if (isset($_GET['deleteUser'])) {
@@ -49,11 +49,11 @@
         }
         unset($_GET['deleteUser']);
         unset($_GET['userName']);
-        header("Location:listadoUsuarios.php");
+        header("Location:listadoProductos.php");
     }
 ?>
 <?php 
-    $_SESSION['title']= "Listado de Usuarios | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Listado de Productos | Katan Amaja - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
@@ -67,7 +67,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="container">
-            <a class="navbar-brand " href="listadoUsuarios.php">Listado de Usuarios</a>
+            <a class="navbar-brand " href="listadoProductos.php">Listado de Productos</a>
         </div>
     </nav>
     <div class="row p-15">
@@ -82,24 +82,24 @@
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
-                <th scope="col">Username</th>
-                <th scope="col">Nombre Completo</th>
-                <th scope="col">Correo Electronico</th>
-                <th scope="col">Privilegio</th>
+                <th scope="col">Nombre de producto</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Activo</th>
                 <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
                     while ($row=mysqli_fetch_assoc($queryUsuario)) {
-                        $id=$row['id_usuario'];
-                        echo '<tr><td>'.$row['Usuario'].'</td>
-                        <td>'.$row['Nombre'].'</td>
-                        <td>'.$row['Email'].'</td>
-                        <td>'.$row['id_privilegio'].'</td>
+                        $id=$row['id'];
+                        echo '<tr><td>'.$row['nombre'].'</td>
+                        <td>'.$row['nombre_categoria'].'</td>
+                        <td>'.$row['precio'].'</td>
+                        <td>'.$row['activo'].'</td>
                         <td><a href="agregarUsuario.php"><i class="fas fa-file-alt" title="Nuevo"></i></a>
                         <a href="editarUsuario.php?id_usuario='.$id.'"><i class="fas fa-edit" title="Editar"></i></a>
-                        <a href="#" onclick="removeUser('.$id.',\''.$row['Usuario'].'\')"><i class="fas fa-cut" title="Eliminar"></i></a></td></tr>';
+                        <a href="#" onclick="removeUser('.$id.',\''.$row['nombre'].'\')"><i class="fas fa-cut" title="Eliminar"></i></a></td></tr>';
                     }
                 ?>
             </tbody>

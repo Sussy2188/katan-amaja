@@ -10,13 +10,13 @@
     $username="usuario";
     if(isset($_SESSION['username'])){ 
         $username=$_SESSION['username'];
-    } 
+    }
     $privilegio=99;
     if (isset($_SESSION['privilegio'])) {
         $privilegio=$_SESSION['privilegio'];
     }
     if ($privilegio>1) {
-        header("Location:dashboard.php");
+        header("Location:index.php");
     }
 
     $_SESSION['dashboardActive']="true";
@@ -27,6 +27,16 @@
     $queryUsuario = mysqli_query($acceso, "SELECT COUNT(id_usuario) AS total FROM usuarios");
     while ($row=mysqli_fetch_assoc($queryUsuario)) {
         $totalUsuarios=$row['total'];
+    }
+    $totalOrdenes=0;
+    $queryOrdenes = mysqli_query($acceso, "SELECT COUNT(id) AS total FROM orden");
+    while ($row=mysqli_fetch_assoc($queryOrdenes)) {
+        $totalOrdenes=$row['total'];
+    }
+    $totalGanancias=0;
+    $queryGanancias = mysqli_query($acceso, "SELECT SUM(total) AS total FROM orden where id_status=2");
+    while ($row=mysqli_fetch_assoc($queryGanancias)) {
+        $totalGanancias=$row['total'];
     }
 ?>
 <?php 
@@ -69,7 +79,7 @@
                         <span><i class="fa fa-shopping-cart f-s-40 color-success"></i></span>
                     </div>
                     <div class="media-body media-text-right">
-                        <h2>1178</h2>
+                        <h2><?php echo $totalOrdenes; ?></h2>
                         <p class="m-b-0">Ventas</p>
                     </div>
                 </div>
@@ -82,7 +92,7 @@
                         <span><i class="fas fa-dollar-sign f-s-40 color-primary"></i></span>
                     </div>
                     <div class="media-body media-text-right">
-                        <h2>568120</h2>
+                        <h2><?php echo $totalGanancias; ?></h2>
                         <p class="m-b-0">Ganancias</p>
                     </div>
                 </div>

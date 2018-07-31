@@ -57,7 +57,7 @@
                     <a class="nav-link dropdown-toggle user-dropdown" href="usuario" id="usuarioDD" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <?php echo $username; ?>
                     </a>
-                    <div class="dropdown-menu show" aria-labelledby="usuarioDD">
+                    <div class="dropdown-menu " aria-labelledby="usuarioDD">
                         <a class="dropdown-item" href='perfil.php?username='>Ver Perfil</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="logout.php">Cerrar Sesion</a>
