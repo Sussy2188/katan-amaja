@@ -8,7 +8,7 @@
  */
 ?>
 <?php 
-    $title ="Bienvenido a Katan Amaja";
+    $title ="Bienvenido a Vinos del Mundo";
     if(isset($_SESSION['title']))
         $title =$_SESSION['title'];
         

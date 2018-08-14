@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina login de katan amaja
+ * Contiene la pagina login de Vinos del Mundo
  *
  * @package Katan
  */
@@ -25,12 +25,15 @@
             $sql="SELECT * FROM usuarios WHERE Usuario='".$username."' AND Contrasenia='".$password."'";
             $query=mysqli_query($acceso, $sql);
             if(mysqli_num_rows($query)>0){
+                $idUsuario="";
                 while ($row=mysqli_fetch_assoc($query)) {
                     $dbUsername=$row['Usuario'];
                     $dbPassword=$row['Contrasenia'];
                     $nombreUsuario=$row['Nombre'];
                     $privilegio=$row['id_privilegio'];
+                    $idUsuario=$row['id_usuario'];
                 }
+                $_SESSION['idUsuario']=$idUsuario;
                 $_SESSION['username']=$dbUsername;
                 $_SESSION['nombreUsuario']=$nombreUsuario;
                 $_SESSION['privilegio']=$privilegio;
@@ -54,7 +57,7 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Iniciar Sesion - Katan Amaja";
+    $_SESSION['title']= "Iniciar Sesion - Vinos del Mundo";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
@@ -62,7 +65,7 @@
     <?php include 'componentes/coverNavBar.php'; ?>
     <main role="main" class="inner cover">
         <form class="form-signin login-form" action="login.php" method="post" name="loginform" id="loginform">
-            <h1 class="cover-heading">Katan Amaja</h1>
+            <h1 class="cover-heading">Vinos del Mundo</h1>
             <h3 class="cover-heading">Login</h3>
             <br/>
             <?php   

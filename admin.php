@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina Usuarios de katan amaja
+ * Contiene la pagina Usuarios de Vinos del Mundo
  *
  * @package Katan
  */
@@ -40,12 +40,12 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Dashboard Administrador | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Dashboard Administrador | Vinos del Mundo - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/helper.css" />
-<script src="js/external/Chart.bundle.min.js"></script>
+<script type="application/javascript" src="js/external/Chart.bundle.min.js"></script>
 
 <div class="wrapper">
     <?php include 'componentes/adminSidebar.php'; ?>
@@ -100,14 +100,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm">
-            <canvas id="myChart" width="400" height="400"></canvas>
-        </div>
-        <div class="col-sm">
-        One of three columns
-        </div>
-        <div class="col-sm">
-        One of three columns
+        <div class="col-12">
+            <canvas id="myChart" height="400vw" ></canvas>
         </div>
     </div>
 </div>
@@ -115,31 +109,54 @@
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
+        height:200,
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            
+            labels: [
+                <?php 
+                    $getLastInsert="SELECT id, total FROM `orden`";
+                    $queryLastOrder = mysqli_query($acceso, $getLastInsert);
+                    if(mysqli_num_rows($queryLastOrder)>0){
+                        $indice=0;
+                        while ($row=mysqli_fetch_assoc($queryLastOrder)) {
+                            
+                            if($indice>0) {
+                                echo ",'". $row['id']."'";
+                            }else{
+                                echo "'". $row['id']."'";
+                            }
+                            $indice=$indice+1;
+                        }    
+                    }
+                ?>
+            ],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                label: 'Ventas',
+                data: [
+                    <?php 
+                        $indice=0;
+                        $queryLastOrder = mysqli_query($acceso, $getLastInsert);
+                        if(mysqli_num_rows($queryLastOrder)>0){
+                            while ($row=mysqli_fetch_assoc($queryLastOrder)) {
+                                
+                                if($indice>0) {
+                                    echo ",". $row['total'];
+                                }else{
+                                    echo $row['total'];
+                                }
+                                $indice=$indice+1;
+                            }    
+                        }
+                    ?>
                 ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
+                backgroundColor:'rgba(255, 0, 0, 0.2)',
+                borderColor: 'rgba(255,0,0,1)',
                 borderWidth: 1
             }]
         },
         options: {
+            responsive:true,
+            maintainAspectRatio:false,
             scales: {
                 yAxes: [{
                     ticks: {
@@ -152,7 +169,7 @@
 </script>
 
 <?php include 'footer.php'; ?>
-<script type="text/javascript">
+<script type="application/javascript">
     $(document).ready(function () {
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');

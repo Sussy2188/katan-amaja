@@ -51,3 +51,11 @@ body {
 .shopping-cart {
   background-color: #3c3c3c87;
 }
+
+.navbar-brand.katan-logo {
+  background-image: url("../img/vinos-del-mundo.png");
+  background-size: cover;
+  width: 160px;
+  height: 25px;
+  background-repeat: no-repeat;
+}

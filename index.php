@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina index de katan amaja
+ * Contiene la pagina index de Vinos del Mundo
  *
  * @package Katan
  */
@@ -12,17 +12,21 @@
         header('Location:dashboard.php');
 ?>
 <?php 
-    $_SESSION['title']= "Bienvenido a Katan Amaja";
+    $_SESSION['title']= "Bienvenido a Vinos del Mundo";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <?php include 'componentes/coverNavBar.php'; ?>
     <main role="main" class="inner cover">
-<h1 class="cover-heading">Katan Amaja</h1>
-    <h3 class="cover-heading">Vinos de cafe</h3>
+    <img class="col-12 col-md-8 col-lg-8" src="img/vinos-del-mundo.png" alg="Vinos del Mundo" />
+    <br/>
+    <br/>
+    <p class="lead">
+    “Un buen vino es como una buena película: dura un instante y te deja en la boca un sabor a gloria; es nuevo en cada sorbo y, como ocurre con las películas, nace y renace en cada saboreador.” Federico Fellini.
+    </p>
+<br/>
 
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     <p class="lead">
         <a href="login.php" class="btn btn-secondary">Iniciar Sesion</a>
         <a href="registrar.php" class="btn btn-secondary">Registrate</a>

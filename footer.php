@@ -7,8 +7,8 @@
  * @package Katan
  */
 ?>
-<script src="js/external/jquery-3.3.1.min.js"></script>
-    <script src="js/external/popper.min.js"></script>
-    <script src="js/external/bootstrap.min.js"></script>
+    <script type="application/javascript" src="js/external/jquery-3.3.1.min.js"></script>
+    <script type="application/javascript" src="js/external/popper.min.js"></script>
+    <script type="application/javascript" src="js/external/bootstrap.min.js"></script>
 </body>
 </html>

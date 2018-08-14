@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene Listado de productos de la pagina katan amaja
+ * Contiene Listado de productos de la pagina Vinos del Mundo
  *
  * @package Katan
  */
@@ -34,7 +34,7 @@
 <?php 
     require("tools/conexion.php");
     $totalUsuarios=0;
-    $queryUsuario = mysqli_query($acceso, "SELECT * FROM listado_productos");
+    $queryListadoProductos = mysqli_query($acceso, "select `productos`.`id` AS `id`,`categoria`.`nombre` AS `nombre_categoria`,`productos`.`nombre` AS `nombre`,`productos`.`precio` AS `precio`,`productos`.`activo` AS `activo` from (`productos` join `categoria` on((`productos`.`id_categoria` = `categoria`.`id`))) ;");
 ?>
 <?php
     if (isset($_GET['deleteUser'])) {
@@ -53,7 +53,7 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Listado de Productos | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Listado de Productos | Vinos del Mundo - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
@@ -91,7 +91,7 @@
             </thead>
             <tbody>
                 <?php 
-                    while ($row=mysqli_fetch_assoc($queryUsuario)) {
+                    while ($row=mysqli_fetch_assoc($queryListadoProductos)) {
                         $id=$row['id'];
                         echo '<tr><td>'.$row['nombre'].'</td>
                         <td>'.$row['nombre_categoria'].'</td>
@@ -108,7 +108,7 @@
 </div>
 
 <?php include 'footer.php'; ?>
-<script type="text/javascript">
+<script type="application/javascript">
     $(document).ready(function () {
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');

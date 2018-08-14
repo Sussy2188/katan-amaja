@@ -25,16 +25,18 @@
 ?>
 <nav id="sidebar">
     <div class="sidebar-header">
-        <h3>Katan Amaja</h3>
+        <h3>Vinos del Mundo</h3>
         <p>Administrador</p>
     </div>
     <ul class="list-unstyled components">
         <li>
             <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"><?php echo $username; ?></a>
             <ul class="collapse list-unstyled" id="userSubmenu">
-                <li><a href='perfil.php?username='>Ver Perfil</a></li>
                 <li><a href="logout.php">Cerrar Sesion</a></li>
             </ul>
+        </li>
+        <li>
+            <a href="dashboard.php">Sitio de clientes</a>
         </li>
     </ul>
     <ul class="list-unstyled components">
@@ -52,9 +54,6 @@
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Productos</a>
             <ul class="collapse list-unstyled" id="pageSubmenu">
                 <li><a href="listadoProductos.php">Lista de productos</a></li>
-                <li><a href="#">Agregar producto</a></li>
-                <li><a href="#">Modificar producto</a></li>
-                <li><a href="#">Eliminar producto</a></li>
             </ul>
         </li>
     </ul>

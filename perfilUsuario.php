@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina Usuarios de katan amaja
+ * Contiene la pagina Usuarios de Vinos del Mundo
  *
  * @package Katan
  */
@@ -76,12 +76,12 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Editar Usuarios | Katan Amaja - Vinos de cafe";
+    $_SESSION['title']= "Editar Usuarios | Vinos del Mundo - Vinos de cafe";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/admin.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/helper.css" />
-<script src="js/external/Chart.bundle.min.js"></script>
+<script type="application/javascript" src="js/external/Chart.bundle.min.js"></script>
 
 <div class="wrapper">
     <?php include 'componentes/adminSidebar.php'; ?>
@@ -127,7 +127,7 @@
 </div>
 
 <?php include 'footer.php'; ?>
-<script type="text/javascript">
+<script type="application/javascript">
     $(document).ready(function () {
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar').toggleClass('active');

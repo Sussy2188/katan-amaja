@@ -16,20 +16,82 @@
 }
 .jumbotron {
     margin-bottom: 0;
-	
+    border-radius: 0;
 }
 
-.informacion{
-	
-	
-	}
-	
-.horarios{
-	
-	}
+.hero-image  {
+    background-image: url("../img/bg/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.hero-menu  {
+    background-image: url("../img/bg/hero2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-testimonio  {
+    background-image: url("../img/bg/hero3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-menu .menu-imagen::before {
+    font-size: 50px
+}
+.hero-menu .menu-imagen {
+    font-size: 70px;
+    line-height: 90px;
+    margin-right: 25px;
+    min-width: 63px;
+    text-align: center;
+}
+
+.hero-image .row {
+    height: 435px;    
+    padding-top: 10px;
+}
+
+.hero-image .logo {
+    background-image: url(../img/vinos-del-mundo.png);
+    height: 92px;
+    background-repeat: no-repeat;
+    background-color: #ae00009c;
+    background-size: contain;
+    background-position: center;
+    padding: 10px;
+    background-blend-mode: hard-light;
+}
 .suscripcion{
 	text-align: left;
 	padding: 0;
 	}
 
+.cart-close {
+    top: 0;
+    right: 0;
+}
+
+.cart-body {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.carrito-close {
+    margin: 20px 0;
+    margin-right: 10px;
+}
+.bg-navbar{
+    background-color: #850e24!important
+}
+.navbar-brand.katan-logo {
+    background-image: url("../img/vinos-del-mundo.png");
+    background-size: cover;
+    width: 160px;
+    height: 25px;
+    background-repeat: no-repeat;
+}

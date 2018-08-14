@@ -1,6 +1,6 @@
 <?php
 /**
- * Contiene la pagina register de katan amaja
+ * Contiene la pagina register de Vinos del Mundo
  *
  * @package Katan
  */
@@ -43,7 +43,7 @@
     }
 ?>
 <?php 
-    $_SESSION['title']= "Registrar Usuario - Katan Amaja";
+    $_SESSION['title']= "Registrar Usuario - Vinos del Mundo";
 ?>
 <?php include 'header.php'; ?>
 <link rel="stylesheet" type="text/css" media="screen" href="css/cover.css" />
@@ -51,7 +51,7 @@
     <?php include 'componentes/coverNavBar.php'; ?>
     <main role="main" class="inner cover">
         <form class="form-signin login-form" action="registrar.php" method="post" name="registerform" id="registerform">
-            <h1 class="cover-heading">Katan Amaja</h1>
+            <h1 class="cover-heading">Vinos del Mundo</h1>
             <h3 class="cover-heading">Registro de Usuario</h3>
             <?php    
                 if(!empty($success)){

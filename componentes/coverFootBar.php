@@ -7,7 +7,7 @@
 ?>
 <footer class="mastfoot mt-auto">
     <div class="inner">
-        <p>Todos los derechos reservados <a href="/contacto">Katan Amaja</a>,
+        <p>Todos los derechos reservados <a href="/contacto">Vinos del Mundo</a>,
         <br />autor <a href="https://www.linkedin.com/in/jaqueline-arriaza-165b66147/">Jaqueline Arroyo</a>.</p>
     </div>
 </footer>
